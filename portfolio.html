@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <!-- Desktop Navigation -->
+    <nav id="desktop-nav">
+      <div class="logo">Tanishk Vaze</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#extra-curricular">Extra-Curricular</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button id="dark-mode-toggle">Dark Mode</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hamburger Navigation -->
+    <nav id="hamburger-nav">
+      <div class="logo">Tanishk Vaze</div>
+      <div class="hamburger-menu">
+        <div
+          class="hamburger-icon"
+          onclick="toggleMenu()"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li>
+            <a href="#extra-curricular" onclick="toggleMenu()"
+              >Extra-Curricular</a
+            >
+          </li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li>
+            <button
+              id="dark-mode-toggle-mobile"
+              onclick="toggleDarkModeAndSave()"
+            >
+              Dark Mode
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section id="profile" class="animate">
+      <div class="section__pic-container">
+        <img
+          src="./assets/Tanishk_img.png"
+          alt="Profile picture of Tanishk Vaze"
+        />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Tanishk Vaze</h1>
+        <p class="section__text__p2">Software Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download Resume
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/'"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="animate">
+      <p class="section__text__p1"></p>
+      <h1 class="title">About Me</h1>
+      <div class="about-details-container center-text">
+        <div class="about-containers center-flex">
+          <div class="details-container">
+            <img
+              src="./assets/experience.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <h3>Experience</h3>
+            <p><br />Fresher<br /><br /><br /></p>
+          </div>
+          <div class="details-container">
+            <img
+              src="./assets/education.png"
+              alt="Education icon"
+              class="icon"
+            />
+            <h3>Education</h3>
+            <p>
+              TY Electrical and Computer Engineering<br />
+              MIT World Peace University, Pune<br />
+              Grade 11-12 : FIITJEE Junior College , Hyderabad<br />
+              Grade 6-10 : T.I.M.E. School, Hyderabad
+            </p>
+          </div>
+        </div>
+        <!-- Modern styled About text container -->
+        <div class="text-container">
+          <p>
+            Hi, I'm Tanishk Vaze—a software developer who blends creative
+            problem-solving with technical expertise. I specialize in building
+            robust web applications using modern tools like HTML, CSS,
+            JavaScript, and React, while also diving into back-end challenges
+            with Node.js and database solutions. I'm always excited to learn new
+            techniques and take on innovative projects that push the limits of
+            technology.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="animate">
+      <p class="section__text__p1"></p>
+      <h1 class="title">Skills</h1>
+      <div class="skills-container center-flex gap-2">
+        <!-- Core Programming Box -->
+        <div class="skill-box slide-in-left">
+          <h3>Core Programming</h3>
+          <ul>
+            <li>C++</li>
+            <li>Java</li>
+            <li>Python</li>
+          </ul>
+        </div>
+        <!-- Web Development Box -->
+        <div class="skill-box slide-in-up">
+          <h3>Web Development</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+          </ul>
+        </div>
+        <!-- Databases Box -->
+        <div class="skill-box slide-in-right">
+          <h3>Databases</h3>
+          <ul>
+            <li>MySQL</li>
+            <li>PostgreSQL</li>
+            <li>MongoDB</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="animate">
+      <p class="section__text__p1"></p>
+      <h1 class="title projects-title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- Project One -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/jarvis.png"
+                alt="Screenshot of Project One"
+                class="project-img"
+              />
+              <br /><br />
+              <img
+                src="./assets/jarvis2.png"
+                alt="Screenshot of Project One"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Jarvis Routing System
+            </h2>
+            <div class="project-footer">
+              <img
+                src="./assets/github.png"
+                alt="View Project One on GitHub"
+                class="icon"
+                onclick="location.href='https://github.com/Tanishk1604/Jarvis_Routing_System'"
+              />
+            </div>
+          </div>
+          <!-- Project Two -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/blinkit2.png"
+                alt="Screenshot of Project Two"
+                class="project-img"
+              />
+              <br /><br />
+              <img
+                src="./assets/blinkit.png"
+                alt="Screenshot of Project Two"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Blinkit Dashboard Using PowerBI
+            </h2>
+            <div class="project-footer">
+              <img
+                src="./assets/github.png"
+                alt="View Project Two on GitHub"
+                class="icon"
+                onclick="location.href='https://github.com/Tanishk1604/Blinkit_dashboard'"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extra-Curricular Section -->
+    <section id="extra-curricular" class="animate">
+      <p class="section__text__p1"></p>
+      <h1 class="title">Extra-Curricular Activities</h1>
+      <br />
+      <div class="about-containers center-flex gap-2">
+        <!-- Box 1: IIT Madras Hackathon -->
+        <div class="details-container certificate-card">
+          <img
+            src="./assets/Hackathon.png"
+            alt="IIT Madras Hackathon Certificate"
+            class="project-img"
+          />
+          <h3>IIT Madras Hackathon</h3>
+          <p>
+            Finalist at the IIT Madras FedEx Hackathon. Recognized for
+            innovative problem-solving and teamwork.
+          </p>
+        </div>
+        <!-- Box 2: Teach For India Volunteer -->
+        <div class="details-container certificate-card">
+          <img
+            src="./assets/TFI.png"
+            alt="Teach For India Volunteer Certificate"
+            class="project-img"
+          />
+          <h3>Teach For India</h3>
+          <p>
+            Actively volunteered with Teach For India, contributing to education
+            initiatives and community outreach.
+          </p>
+        </div>
+        <!-- Box 3: AICTE VOIS Internship -->
+        <div class="details-container certificate-card">
+          <img
+            src="./assets/Internship.png"
+            alt="AICTE VOIS Internship Certificate"
+            class="project-img"
+          />
+          <h3>AICTE VOIS Internship</h3>
+          <p>
+            Internship in Data Analysis. Gained hands-on experience in data
+            interpretation and visualization.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="animate">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <form id="contact-form" onsubmit="return validateForm(event);">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Enter your message"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-color-1">Send Message</button>
+          </div>
+          <div id="form-error" class="form-error"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="animate">
+      <p>Copyright &#169; 2023 Tanishk Vaze. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
